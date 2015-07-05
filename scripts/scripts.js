@@ -1,7 +1,7 @@
 $(function(){
 	// Smooth Scroll
 	$('a').smoothScroll({
-		speed: 800
+		speed: 700
 	});
 
 	// Sticky Navigation
