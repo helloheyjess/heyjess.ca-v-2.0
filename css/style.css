@@ -100,7 +100,6 @@ ul.nav {
 	text-align: center;
 	background: #111;
 	z-index: 999;
-	box-shadow: 0px 0px 5px #111;
 	height: 10vh;
 }
 
@@ -160,7 +159,7 @@ ul.nav a:hover:after {
 /*About Section Styles*/
 
 .about .photo {
-	background: url(../images/IMG_2842.jpg) no-repeat;
+	background: url(../images/PAM_2353_web.jpg) no-repeat;
 	height: 100vh;	
 }
 
@@ -234,7 +233,7 @@ ul.social li a:hover {
 	left: 0;
 	bottom: 0;
 	background: linear-gradient(45deg, rgba(0,227,180,0.6) 0%, rgba(0,227,180,0.6) 50%, transparent 50%, transparent 100%);
-	width: 50%;
+	width: 400px;
 	height: 100%;
 }
 
@@ -302,4 +301,18 @@ input, textarea {
 	color: #FF9700;
 }
 
+/*Visually Hide Label Elements from Screen*/
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button { display: none !important; }
 
