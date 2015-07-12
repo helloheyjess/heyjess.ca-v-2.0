@@ -159,7 +159,7 @@ ul.nav a:hover:after {
 /*About Section Styles*/
 
 .about .photo {
-	background: url(../images/PAM_2353_web.jpg) no-repeat;
+	background: url(../images/PAM_2353_web.jpg) no-repeat center;
 	height: 100vh;	
 }
 
@@ -212,11 +212,20 @@ ul.social li a:hover {
 	text-align: center;
 }
 
+.portfolio h3 {
+	margin: 0;
+}
+
+.portfolio p {
+	margin: 15px 0;
+}
+
 .portfolio-item {
 	margin-top: 50px;
 	box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 	position: relative;
-	overflow: hidden;
+	background: #fff ;
+	text-align: left;
 }
 
 .portfolio-item:first-of-type {
@@ -225,30 +234,18 @@ ul.social li a:hover {
 
 .portfolio-img,
 .portfolio-info {
+	float: left;
+}
+
+.portfolio-img {
+	width: 45%;
 	height: 400px;
-}
-
-.portfolio-img-overlay {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	background: linear-gradient(45deg, rgba(0,227,180,0.6) 0%, rgba(0,227,180,0.6) 50%, transparent 50%, transparent 100%);
-	width: 400px;
-	height: 100%;
-}
-
-.portfolio-img img {
-	height: 100%;
+	background: url(../images/dtrc.jpg) no-repeat left center;
 }
 
 .portfolio-info {
-	text-align: left;
-	background: #fff;
-	padding: 50px 20px 0 20px;
-}
-
-.portfolio h3 {
-	margin: 0;
+	padding: 40px 25px;	
+	width: 55%;
 }
 
 .portfolio-types {
@@ -261,6 +258,15 @@ ul.social li a:hover {
 
 .portfolio-description {
 	margin-bottom: 50px;
+}
+
+.portfolio-img-overlay {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, rgba(0,227,180,0.6) 0%, rgba(0,227,180,0.6) 50%, transparent 50%, transparent 100%);
+	width: 400px;
+	height: 100%;
 }
 
 /*Footer Styles*/
