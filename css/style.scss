@@ -1,0 +1,354 @@
+
+@import "setup";
+@import "variables";
+@import "mixins";
+
+/*Base Styles*/
+
+body {
+	font-family: $bodyFont;
+	background: $white;
+	color: $black;
+	font-size: 16px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1250px;
+}
+
+/*Typography Styles*/
+
+h1, h2, h3 {
+	font-family: $headerFont;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: $orange;
+  	margin: 0;
+  	text-transform: uppercase;
+  	text-shadow: 1px 1px 4px $black;
+}
+
+h2 {
+	font-size: 2rem;
+	color: #111;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: $pink;
+	text-decoration: none;
+	border-bottom: 2px solid $pink;
+	font-weight: 700;
+	&:hover,
+	&:focus {
+		border-bottom: none;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+/*Header Styles*/
+
+
+
+header {
+	@include background-img('../images/girl-edit.jpg');
+	background-attachment: fixed;
+	padding: 30% 0 5% 0;
+}
+
+.branding {
+	margin-left: 1%;
+	width: 55%;
+	p {
+		letter-spacing: 1px;
+		font-family: $headerFont;
+		font-size: 1.5rem;
+		color: $white;
+		text-shadow: 1px 1px 4px #000;
+	}
+	.standout {
+		border-bottom: 2px solid $orange;
+		font-style: italic;
+	}
+}
+
+/*Navigation Menu Styles*/
+
+.nav {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	background: $black;
+	z-index: 999;
+	li {
+		display: inline-block;
+		padding: 25px 20px;
+	}
+	a {
+		text-decoration: none;
+		border: none;
+		text-transform: uppercase;
+		color: $turquoise;
+		position: relative;
+		transition: all 0.25s;
+		padding-bottom: 3px;
+		font-size: 1.2rem;
+		font-weight: 400;
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+		&:after {
+			content: "";
+			background: linear-gradient(to right, $turquoise 0%, $turquoise 50%, transparent 50%, transparent 100%);
+			background-position: 100% 0%;
+			background-size: 200% 100%;
+			width: 100%;
+			height: 3px;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			transition: all 0.5s;
+		}
+
+	}
+}
+
+ul.nav a:hover:after {
+	background-position: 0 0;
+}
+
+.sticky-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/*General Section Styles*/
+
+.section-half {
+	float: left;
+	width: 50%;
+}
+
+/*About Section Styles*/
+
+.about {
+	.photo {
+		@include background-img('../images/PAM_2353_web.jpg');
+		height: 100vh;	
+	}
+	.content {
+		padding: 100px 50px 50px;
+		p {
+			margin: 30px 0;
+		}
+	}
+}
+
+.social {
+	margin: 0;
+	padding: 0;
+	margin-top: 50px;
+	li {
+		display: inline-block;
+		margin-right: 20px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	a {
+		color: #222;
+		border: none;
+		transition: all 0.25s ease-in-out;
+		&:hover {
+			color: $pink;
+		}
+	}
+}
+
+/*Work Section Styles*/
+
+.portfolio {
+	background: linear-gradient(#F4F4F4 0%, #F4F4F4 50%, #E5E5E5 50%, #E5E5E5 100%);
+	background-attachment: fixed;
+	background-size: 5px 5px;
+	padding: 100px 0;
+	h2 {
+		margin: 0;
+		padding: 25px;
+		background: rgba(255,255,255,0.6);
+		text-align: center;
+	}
+	h3 {
+		margin: 0;
+	}
+	p {
+		margin: 15px 0;
+	}
+}
+
+.portfolio-item {
+	margin-top: 50px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	position: relative;
+	background: $white;
+	text-align: left;
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.portfolio-img,
+.portfolio-info {
+	float: left;
+}
+
+.portfolio-img {
+	width: 45%;
+	height: 400px;
+	background: url(../images/dtrc.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.portfolio-info {
+	padding: 40px 25px;	
+	width: 55%;
+}
+
+.portfolio-types {
+	color: $pink;
+	font-weight: 700;
+	padding-bottom: 15px;
+	border-bottom: 1px dotted black;
+	font-family: 'Questrial', sans-serif;
+}
+
+.portfolio-description {
+	margin-bottom: 50px;
+}
+
+.portfolio-img-overlay {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, rgba($turquoise,0.6) 0%, rgba($turquoise,0.6) 50%, transparent 50%, transparent 100%);
+	width: 400px;
+	height: 100%;
+}
+
+/*Footer Styles*/
+
+footer {
+	@include background-img('../images/footer.jpg');
+	background-attachment: fixed;
+	padding: 200px 0 50px;
+}
+
+form {
+	width: 55%;
+	border-radius: 10px;
+	margin-bottom: 120px;
+}
+
+input, textarea {
+	border: none;
+	border-bottom: 1px solid black;
+	background: transparent;
+	margin: 25px auto;
+	display: block;
+	width: 100%;
+	padding: 10px;
+}
+
+.btn {
+	border: none;
+	background: transparent;
+	color: #111;
+	float: right;
+	transition: all 0.25s ease-in-out;
+	font-weight: 700;
+	&:hover {
+		color: $orange;
+	}
+}
+
+/*Visually Hide Label Elements from Screen*/
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button { display: none !important; }
+
+/*Media Queries*/
+
+@media all and (max-width: 1024px) {
+	.section-half {
+		float: none;
+		width: 100%;
+	}
+
+	.content {
+		text-align: center;
+		padding: 50px;
+	}
+
+	.branding {
+		padding-left: 2%;
+	}
+
+	footer {
+		padding-left: 2%
+	}
+}
+
+@media all and (max-width: 825px) {
+	.portfolio-item {
+		text-align: center;
+	}
+	.portfolio-img, .portfolio-info {
+		float: none;
+		width: 100%;
+	}
+
+	.portfolio-img-overlay {
+		display: none;
+	}
+	
+	footer {
+		text-align: center;
+		padding-top: 50px;
+	}
+	form {
+		margin: 0 auto;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.branding {
+		width: 100%;
+		text-align: center;
+	}
+}
