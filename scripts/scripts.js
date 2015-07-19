@@ -13,10 +13,8 @@ $(function(){
 
 	  if(scrolled > mainTop){
 	    $("ul.nav").addClass("sticky-nav");
-	    $('#about').css('padding-top' , '80px' );
 	  } else{
 	    $("ul.nav").removeClass("sticky-nav");
-	    $('#about').css('padding-top', '0');
 	  }
 
 	});
